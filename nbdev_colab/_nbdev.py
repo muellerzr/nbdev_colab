@@ -4,9 +4,11 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"setup_drive": "00_core.ipynb",
          "setup_git": "00_core.ipynb",
-         "git_push": "00_core.ipynb"}
+         "git_push": "00_core.ipynb",
+         "foo": "01_modules.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "modules.py"]
 
 doc_url = "https://muellerzr.github.io/nbdev_colab/"
 
