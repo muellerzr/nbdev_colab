@@ -45,9 +45,9 @@ def git_push(path:Path, message:str):
   commands.append('nbdev_install_git_hooks')
   commands.append('nbdev_build_lib')
   commands.append('git add *')
-  commands.append(f'git commit -m {message}')
+  commands.append(f'git commit -m "{message}"')
   commands.append('git push origin master')
   for cmd in commands:
-    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     output, err = process.communicate()
   os.chdir(start)
